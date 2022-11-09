@@ -1,0 +1,156 @@
+@import "imports/variables.css";
+
+body {
+  margin: 0;
+}
+
+/*Navigation*/
+
+header {
+  background: var(--header-background);
+  color: var(--text-color-one);
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+nav {
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: 410ms ease-in-out;
+  background: var(--header-background);
+  text-align: center;
+  top: 100%;
+  position: absolute;
+  width: 100%;
+  right: 0;
+}
+
+nav ul {
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-right: 1.5em;
+  margin-bottom: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding-left: 1.5em;
+  opacity: 0;
+  transitio: opacity 1500ms ease-in-out;
+}
+
+.toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.toggle:checked ~ nav a {
+  opacity: 1;
+  transitio: 250ms ease-in-out;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle-label {
+  margin-right: 2.3em;
+  top: 0;
+  right: 0;
+  position: absolute;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.toggle-label span,
+.toggle-label span::before,
+.toggle-label span::after {
+  background: white;
+  display: block;
+  position: relative;
+  width: 2em;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.toggle-label span::before,
+.toggle-label span::after {
+  position: absolute;
+  content: "";
+}
+
+.toggle-label span::before {
+  bottom: 10px;
+}
+
+.toggle-label span::after {
+  top: 10px;
+}
+
+nav a:hover {
+  color: rgb(199, 199, 199);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(500px, 10fr) 1fr;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 2 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    opacity: 1;
+    padding-left: 0px;
+    position: relative;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+  nav a::before {
+    display: block;
+    content: "";
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 230ms;
+    background: #fff;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -0.4em;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav li {
+    margin-left: 2.7em;
+  }
+
+  .toggle-label {
+    display: none;
+  }
+
+  .logo-styling {
+    grid-column: 2 / 3;
+    height: 0px;
+  }
+}
