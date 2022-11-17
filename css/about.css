@@ -1,0 +1,86 @@
+main {
+  background-image: url("/images/bildee.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 27%;
+  background-position-y: bottom;
+  background-position-x: center;
+}
+
+.logo-styling {
+}
+
+main h2 {
+  font-size: 2.3em;
+}
+
+main p {
+  font-size: var(--font-size-paragraphs-main);
+}
+
+@media screen and (min-width: 1220px) {
+  body {
+    background: #fcfcfc;
+  }
+
+  span {
+    font-weight: bold;
+  }
+  .page-grid {
+    display: grid;
+    grid-template-rows: 320px 540px 1fr 150px;
+    line-height: var(--line-height);
+    background-image: url("/images/big-splash.svg"),
+      url("/images/small-splash.svg"), url("/images/top-splash.svg");
+    background-size: 23%, 29%, 30%;
+    background-position-y: 50%, 17%, -7%;
+    background-position-x: 6%, 102%, 10%;
+    background-repeat: no-repeat;
+  }
+
+  main h2,
+  main h3 {
+    text-align: center;
+  }
+
+  main img {
+    border-radius: 50%;
+    width: 220px;
+  }
+
+  .header-image {
+    background-image: url("/images/about-logo-black.svg");
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position-y: center, 28%;
+    background-position-x: center;
+  }
+
+  .grid-section-one {
+    margin: auto;
+    max-width: 500px;
+    margin-top: 0;
+  }
+
+  .grid-section-two {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-row: repeat(3, 1fr);
+    column-gap: 50px;
+    justify-content: center;
+    max-width: 1000px;
+    padding: 50px;
+    margin: auto;
+    background: white;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.42);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    background-position-y: -16%;
+  }
+
+  .background-color {
+    heigh: 50%;
+  }
+}

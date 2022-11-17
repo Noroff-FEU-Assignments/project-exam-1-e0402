@@ -1,4 +1,8 @@
 :root {
   --header-background: #000000;
   --text-color-one: #ffffff;
+  --button-background-color: #000000;
+  --font-size-paragraphs-main: 1em;
+  --line-height: 1.7;
+  --h2-size: 2.3em;
 }

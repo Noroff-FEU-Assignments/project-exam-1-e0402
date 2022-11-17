@@ -1,0 +1,89 @@
+@import "imports/variables.css";
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 100px;
+}
+
+/*Homepage carousel*/
+
+.article-carousel {
+  margin: auto;
+  margin-top: 100px;
+  height: 600px;
+  width: 80%;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  background: lawngreen;
+  position: relative;
+  height: 100%;
+}
+
+.carousel-track {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: transform 400ms ease-in;
+  height: 100%;
+}
+
+.carousel-slide {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.carousel-button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.carousel-button--left {
+  left: -50px;
+}
+
+.carousel-button--right {
+  right: -50px;
+}
+
+.carousel-button img {
+  width: 20px;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.carousel-indicator {
+  cursor: pointer;
+  margin: 0 12px;
+  background: rgb(194, 194, 194);
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 50%;
+}
+
+.active-slide {
+  background: black;
+}
+
+.is-hidden {
+  display: none;
+}

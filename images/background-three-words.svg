@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="197.71" height="256.281" viewBox="0 0 197.71 256.281">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 48px;
+        font-family: SixHands-Brush, Six Hands;
+        opacity: 0.433;
+      }
+    </style>
+  </defs>
+  <g id="Group_2" data-name="Group 2" transform="translate(-122.251 -480.735)">
+    <text id="ART" class="cls-1" transform="matrix(0.966, 0.259, -0.259, 0.966, 201.762, 525.426)"><tspan x="0" y="0">ART</tspan></text>
+    <text id="Retrospective" class="cls-1" transform="matrix(0.966, 0.259, -0.259, 0.966, 127.428, 584.939)"><tspan x="0" y="0">Retrospective</tspan></text>
+    <text id="Collective" class="cls-1" transform="matrix(0.966, 0.259, -0.259, 0.966, 161.32, 682.239)"><tspan x="0" y="0">Collective</tspan></text>
+  </g>
+</svg>
