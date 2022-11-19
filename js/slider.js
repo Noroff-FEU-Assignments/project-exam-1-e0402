@@ -75,9 +75,9 @@ rightButton.addEventListener("click", (e) => {
   hideAndShowArrows(carouselSlides, leftButton, rightButton, nextIndex);
 });
 
-//When the nav idicators are clicked, the carousel shows to the corresponding slide
+// When the nav idicators are clicked, the carousel shows to the corresponding slide
 navigationDots.addEventListener("click", (e) => {
-  //Determining the indicator that was clicked
+  // Determining the indicator that was clicked
   const targetDot = e.target.closest("button");
 
   if (!targetDot) return;

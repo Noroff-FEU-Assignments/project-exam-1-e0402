@@ -131,6 +131,12 @@ main textarea {
   grid-template-rows: repeat(5, 1fr);
 }
 
+/*Error message, contact form*/
+.error-contact-form {
+  display: none;
+  color: red;
+}
+
 @media screen and (min-width: 527px) {
   .page-grid {
     max-width: 500px;
