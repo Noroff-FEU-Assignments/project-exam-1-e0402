@@ -11,6 +11,7 @@ const slideWith = carouselSlides[0].getBoundingClientRect().width;
 // carouselSlides[0].style.left = slideWith * 0 + "px";
 // carouselSlides[1].style.left = slideWith * 1 + "px";
 // carouselSlides[2].style.left = slideWith * 2 + "px";
+//Etc...
 
 const determineSlidePosition = (slide, index) => {
   slide.style.left = slideWith * index + "px";

@@ -6,31 +6,26 @@ main {
 }
 
 main p {
-  color: rgb(0, 0, 0);
-  max-width: 250px;
+  color: blue;
 }
 
-main h3 {
-  text-align: center;
+.test-one {
+  display: flex;
 }
-
-/* .text-max-with {
-  max-width: 100px;
-} */
 
 /*Homepage carousel*/
 
 .article-carousel {
   margin: auto;
   margin-top: 100px;
-  height: 700px;
+  height: 600px;
   width: 90%;
   position: relative;
   max-width: 800px;
 }
 
 .carousel-image {
-  width: 100%;
+  width: 70%;
   height: 30%;
   object-fit: cover;
 }
@@ -95,7 +90,7 @@ main h3 {
 }
 
 .active-slide {
-  background: rgb(177, 177, 177);
+  background: black;
 }
 
 .is-hidden {
@@ -104,21 +99,6 @@ main h3 {
 
 @media screen and (min-width: 1366px) {
   .active-slide {
-    background: rgb(241, 241, 241);
-  }
-
-  .test-one,
-  .test-two {
-    display: flex;
-  }
-
-  .hide {
-    display: none;
-  }
-
-  .carousel-image {
-    width: 70%;
-    height: 30%;
-    object-fit: cover;
+    background: rgb(250, 29, 29);
   }
 }
