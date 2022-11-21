@@ -24,7 +24,6 @@ main h3 {
   height: 2000px;
   width: 350px;
   position: relative;
-  max-widt: 800px;
 }
 
 .carousel-image {
@@ -35,7 +34,7 @@ main h3 {
 
 .carousel-track-container {
   overflow: hidden;
-  background: lawngreen;
+  backgroun: lawngreen;
   position: relative;
   height: 100%;
 }
@@ -61,16 +60,16 @@ main h3 {
   background: transparent;
   border: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-2494%);
   position: absolute;
 }
 
 .carousel-button--left {
-  left: -50px;
+  left: 0%;
 }
 
 .carousel-button--right {
-  right: -50px;
+  right: 0%;
 }
 
 .carousel-button img {
@@ -94,7 +93,7 @@ main h3 {
 }
 
 .active-slide {
-  background: rgb(177, 177, 177);
+  background: rgb(68, 68, 68);
 }
 
 .is-hidden {
@@ -106,12 +105,23 @@ main h3 {
     height: 2300px;
     width: 480px;
   }
+  .carousel-button {
+    transform: translateY(-2834%);
+  }
 }
 
 @media screen and (min-width: 600px) {
   .article-carousel {
-    height: 1500px;
+    height: 1600px;
     width: 580px;
+  }
+
+  .carousel-image {
+    height: 45%;
+  }
+
+  .carousel-button {
+    transform: translateY(-50%);
   }
 
   main li div:nth-child(1) img {
@@ -158,14 +168,15 @@ main h3 {
   }
 
   .active-slide {
-    background: rgb(241, 241, 241);
     overflow: hidden;
   }
 
-  .carousel-slide {
-    width: 100%;
+  .carousel-button--left {
+    left: -50px;
+  }
 
-    overflo: hidden;
+  .carousel-button--right {
+    right: -50px;
   }
 
   .test-one,
@@ -175,5 +186,11 @@ main h3 {
 
   .hide {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .article-carousel {
+    width: 1200px;
   }
 }

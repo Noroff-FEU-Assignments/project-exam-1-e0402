@@ -11,12 +11,12 @@
 // }
 
 const articlesUrl = `https://schoolproject.tech/flowerpower/wp-json/wc/v3/products/?consumer_key=ck_6c90a14e6f8635c6ec35e78ebd8f73b23a0647cc&consumer_secret=cs_f1de37e9ba6d73daacf712e2536c593462ddce89&featured=false`;
-const articlesContainerOne = document.querySelector(".test-one");
-const articlesContainerTwo = document.querySelector(".test-two");
-const articlesContainerThree = document.querySelector(".test-three");
-const articlesContainerFour = document.querySelector(".test-four");
-const articlesContainerFive = document.querySelector(".test-five");
-const articlesContainerSix = document.querySelector(".test-six");
+const articlesContainerOne = document.querySelector(".articles-container-one");
+const articlesContainerTwo = document.querySelector(".articles-container-two");
+// const articlesContainerThree = document.querySelector(".test-three");
+// const articlesContainerFour = document.querySelector(".test-four");
+// const articlesContainerFive = document.querySelector(".test-five");
+// const articlesContainerSix = document.querySelector(".test-six");
 
 // document.addEventListener("DOMContentLoaded", jsMediaQuery);
 
