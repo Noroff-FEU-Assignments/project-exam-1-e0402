@@ -12,21 +12,30 @@
   </head>
   <body>
     <header>
-      <h1 class="logo-styling">Logo</h1>
+      <a href="index.html" class="logo logo-styling"
+        ><img src="/images/logo-white.svg" alt=""
+      /></a>
       <input type="checkbox" class="toggle" id="toggle" />
       <label for="toggle" class="toggle-label">
         <span></span>
       </label>
       <nav>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Articles</a></li>
-          <li><a href="">About</a></li>
+          <li><a href="index.html" class="current-page">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <div class="center-h1">
+        <h1>
+          <span class="title-bigger-size">Welcome to ARTrospective!</span> -An
+          art history blog dedicated to making art history free and more
+          available for everyone
+        </h1>
+      </div>
       <div class="article-carousel">
         <button class="carousel-button carousel-button--left is-hidden">
           <img src="/images/left-arrow.svg" alt="" />
@@ -35,10 +44,8 @@
           <ul class="carousel-track" id="parent">
             <li class="carousel-slide active-slide articles-container-one"></li>
             <li class="carousel-slide articles-container-two"></li>
-            <li class="carousel-slide"></li>
-            <li class="carousel-slide"></li>
-            <li class="carousel-slide"></li>
-            <li class="carousel-slide"></li>
+            <li class="carousel-slide articles-container-three"></li>
+            <li class="carousel-slide articles-container-four"></li>
           </ul>
         </div>
         <button class="carousel-button carousel-button--right">
@@ -46,6 +53,8 @@
         </button>
         <div class="carousel-nav">
           <button class="carousel-indicator active-slide"></button>
+          <button class="carousel-indicator"></button>
+          <button class="carousel-indicator"></button>
           <button class="carousel-indicator"></button>
         </div>
       </div>

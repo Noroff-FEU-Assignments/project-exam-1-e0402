@@ -1,9 +1,12 @@
 main {
-  background-image: url("/images/bildee.jpeg");
+  background-image: url("/images/bildee.jpeg"); /*Hidden because of bg color*/
   background-repeat: no-repeat;
   background-size: 100% 27%;
   background-position-y: bottom;
   background-position-x: center;
+  background: var(--main-background);
+  min-height: 100vh;
+  flex-grow: 1;
 }
 
 .logo-styling {
@@ -18,10 +21,6 @@ main p {
 }
 
 @media screen and (min-width: 1220px) {
-  body {
-    background: #fcfcfc;
-  }
-
   span {
     font-weight: bold;
   }
@@ -50,7 +49,7 @@ main p {
   .header-image {
     background-image: url("/images/about-logo-black.svg");
     background-repeat: no-repeat;
-    background-size: 35%;
+    background-size: 35%; /*NB USE pixels!!!*/
     background-position-y: center, 28%;
     background-position-x: center;
   }

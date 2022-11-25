@@ -1,8 +1,20 @@
 @import "imports/variables.css";
 
+.logo {
+  width: 200px;
+  padding: 20px 0 40px 0;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1,
@@ -10,6 +22,11 @@ h2,
 h3 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: bold;
+  line-height: var(--line-height-headings);
+}
+
+h1 {
+  font-size: var(--h1-size);
 }
 
 h2 {
@@ -17,7 +34,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.8em;
+  font-size: 2em;
+}
+
+main {
+  background: var(--main-background);
 }
 
 /*Header (Navigation)*/
@@ -128,7 +149,6 @@ footer button:hover {
 footer {
   background: var(--header-background);
   color: var(--text-color-one);
-  positio: absolute;
   bottom: 0;
   width: 100%;
   display: grid;
@@ -139,8 +159,8 @@ footer {
 
 .footer-icons-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
   margin: 0 auto;
 }
 
@@ -191,18 +211,34 @@ footer ul {
 footer a {
   text-decoration: none;
   color: var(--text-color-one);
+  font-size: 0.91em;
 }
 
 .copyright {
   text-align: center;
 }
 
+@media screen and (min-width: 500px) {
+  .footer-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   /*Navigation*/
+
+  .current-page {
+    text-decoration: underline;
+  }
+
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(500px, 10fr) 1fr;
-    padding-top: 20px;
+    padding-top: 5px;
+    height: 95px;
   }
 
   header nav {
@@ -211,13 +247,13 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-to: 3px;
   }
 
   header nav a {
     opacity: 1;
     padding-left: 0px;
     position: relative;
+    font-weight: bold;
   }
 
   header nav a:hover::before {
@@ -255,6 +291,9 @@ footer a {
     margin-top: 0px;
   }
 
+  .logo {
+  }
+
   /*Footer*/
 
   footer {
@@ -263,6 +302,7 @@ footer a {
     row-gap: 0;
     column-gap: 50px;
     justify-content: center;
+    positio: sticky; /*NB*/
   }
 
   .footer-row-one {
@@ -284,6 +324,7 @@ footer a {
   }
 
   .footer-icons-grid {
+    grid-template-columns: repeat(6, 1fr);
     grid-row: 3/4;
     grid-column: 3/4;
     width: 20px;
@@ -293,6 +334,10 @@ footer a {
 
   footer ul {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  footer a {
+    font-size: 1em;
   }
 
   .copyright {

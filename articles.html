@@ -6,53 +6,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="An art blog thats free and informative" />
-    <title>Art blog | Home</title>
+    <title>ARTrospective | Articles</title>
     <link href="css/style.css" rel="stylesheet" />
-    <link href="css/6ineach.css" rel="stylesheet" />
+    <link href="css/articles.css" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <h1 class="logo-styling">Logo</h1>
+      <a href="index.html" class="logo logo-styling"
+        ><img src="/images/logo-white.svg" alt=""
+      /></a>
       <input type="checkbox" class="toggle" id="toggle" />
       <label for="toggle" class="toggle-label">
         <span></span>
       </label>
       <nav>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Articles</a></li>
-          <li><a href="">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="article-carousel">
-        <button class="carousel-button carousel-button--left is-hidden hide">
-          <img src="/images/left-arrow.svg" alt="" />
-        </button>
-        <div class="carousel-track-container">
-          <ul class="carousel-track">
-            <li class="carousel-slide active-slide test-one"></li>
-            <li class="carousel-slide test-two"></li>
-            <li class="carousel-slide test-three"></li>
-            <li class="carousel-slide test-four"></li>
-            <li class="carousel-slide test-five"></li>
-            <li class="carousel-slide test-six"></li>
-          </ul>
-        </div>
-        <button class="carousel-button carousel-button--right hide">
-          <img src="/images/right-arrow.svg" alt="" />
-        </button>
-        <div class="carousel-nav">
-          <button class="carousel-indicator active-slide hide"></button>
-          <button class="carousel-indicator hide"></button>
-          <button class="carousel-indicator hide"></button>
-          <button class="carousel-indicator hide"></button>
-          <button class="carousel-indicator hide"></button>
-          <button class="carousel-indicator hide"></button>
-        </div>
+      <div class="center-h1">
+        <h1>Enjoy our free selection of art history related articles</h1>
       </div>
+      <div>
+        <input type="text" placeholder="  John" />
+        <button><img src="" alt="" /></button>
+      </div>
+      <div>
+        <button data-filter="Latest">Latest</button>
+        <button data-filter="Impressionism">Impressionism</button>
+        <button data-filter="Cubism">Cubism</button>
+        <button data-filter="Golden age">Golden age</button>
+        <button data-filter="Flemish">Flemish</button>
+        <button data-filter="Modernism">Modernism</button>
+        <button data-filter="Realism">Realism</button>
+        <button data-filter="Dutch">Dutch</button>
+        <button data-filter="American">American</button>
+        <button data-filter="Expressionism">Expressionism</button>
+      </div>
+      <div><h2>Latest articles</h2></div>
+      <div class="articles-container"></div>
     </main>
     <footer>
       <div class="footer-row-one">
@@ -134,7 +131,6 @@
         <p>Logo&copy;<em id="=date"></em>2022 All rights reserved</p>
       </div>
     </footer>
-    <script src="js/6ineach.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/articles.js"></script>
   </body>
 </html>
