@@ -1,3 +1,104 @@
-img {
+main {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(4, auto);
+  gap: 60px;
+}
+
+main h1 {
+  text-align: center;
+  margin: 50px 0 0 0;
+}
+
+.search {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Search*/
+main input {
+  height: 36px;
+  width: 350px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid black;
+}
+
+.search button {
+  padding: 8px 17px 7px 13px;
+  cursor: pointer;
+  background: rgb(0, 0, 0);
+  border: 1px solid black;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+}
+
+.search img {
+  height: 20px;
+}
+
+/*Categories*/
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.category-button {
+  padding: 5px 20px 7px 20px;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 1em;
+  height: 36px;
+  cursor: pointer;
+}
+
+.active-button {
+  padding: 5px 20px 7px 20px;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 0.9em;
+  height: 36px;
+}
+
+/*Hover effect category buttons*/
+.category-button:hover {
+  border: 1.8px solid black;
+}
+
+.search button:hover {
+  border: 1px solid rgb(159, 159, 159);
+}
+
+/*Articles*/
+.articles-container img {
   width: 100%;
+}
+
+.articles-container {
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 800px) {
+  .articles-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .articles-container {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    max-width: 1200px;
+    gap: 30px;
+  }
 }

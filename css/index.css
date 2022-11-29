@@ -3,8 +3,7 @@
 main {
   display: grid;
   gap: 200px;
-  grid-template-rows: 460px 1fr 50px;
-  flex-grow: 1;
+  grid-template-rows: 300px 1fr 50px;
 }
 
 h1 {
@@ -12,7 +11,7 @@ h1 {
 }
 
 .title-bigger-size {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 h1 img {
@@ -22,6 +21,12 @@ h1 img {
 .center-h1 {
   margin: auto;
   margin-top: 50px;
+}
+
+/*Read more button hover effect*/
+
+a:hover {
+  color: rgb(199, 199, 199);
 }
 
 /*Homepage carousel*/
@@ -76,7 +81,6 @@ main li div {
 
 .carousel-track-container {
   overflow: hidden;
-  backgroun: lawngreen;
   position: relative;
   height: 100%;
 }
@@ -128,8 +132,8 @@ main li div {
   cursor: pointer;
   margin: 0 12px;
   background: rgb(194, 194, 194);
-  height: 20px;
-  width: 20px;
+  height: 17px;
+  width: 17px;
   border: 0;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.27);
@@ -146,23 +150,26 @@ main li div {
 main li div a {
   text-decoration: none;
   text-align: center;
+  font-size: 0.85em;
   color: var(--text-color-one);
   font-weight: bold;
   background: black;
-  padding: 15px 30px;
-  height: 50px;
-  margin: 15px auto;
+  padding: 10px 30px;
+  padding-top: 11px;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
   border-radius: 25px;
   box-sizing: border-box;
 }
 
 @media screen and (min-width: 500px) {
-  main {
-    grid-template-rows: 360px 1fr 50px;
-  }
-
   h1 {
     max-width: 450px;
+  }
+
+  .title-bigger-size {
+    font-size: 1.5em;
   }
 
   .article-carousel {
@@ -179,53 +186,51 @@ main li div a {
 }
 
 @media screen and (min-width: 600px) {
-  main {
-    grid-template-rows: 380px 1fr 50px;
-  }
   h1 {
     max-width: 550px;
   }
 
-  .article-carousel {
-    height: 2000px;
-    width: 580px;
+  main {
+    grid-template-rows: 250px 1fr 50px;
   }
 
-  .carousel-image {
-    height: 100%;
+  .article-carousel {
+    width: 580px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    max-width: 780px;
+  }
+
+  main {
+    grid-template-rows: 120px 1fr 50px;
   }
 
   main li div {
-    grid-template-rows: 250px 350px 30px 0px 70px;
+    grid-template-rows: 500px 150px 30px 40px 50px;
+  }
+
+  .article-carousel {
+    width: 780px;
+    height: 3000px;
   }
 
   .carousel-button {
-    transform: translateY(-2550%);
-  }
-
-  main li div:nth-child(1) img {
-    height: 100%;
-  }
-
-  main li {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 800px 1fr;
-    gap: 20px;
-  }
-
-  main li div:nth-child(1) {
-    grid-row: 1/2;
-    grid-column: span 2;
+    transform: translateY(-3720%);
   }
 }
 
 @media screen and (min-width: 1050px) {
-  main {
-    grid-template-rows: 30px 1fr 50px;
-  }
-
   h1 {
     max-width: 1000px;
+    font-size: 2.2em;
+    line-height: var(--line-height);
+  }
+
+  main {
+    grid-template-rows: 0px 1fr 50px;
   }
 
   main li {
@@ -235,7 +240,7 @@ main li div a {
   }
 
   main li div {
-    grid-template-rows: 250px 300px 30px 50px 50px;
+    grid-template-rows: 250px 300px 30px 0px 50px;
   }
 
   main li div:nth-child(1) {
@@ -243,7 +248,7 @@ main li div a {
   }
 
   .article-carousel {
-    height: 1120px;
+    height: 1020px;
     width: 900px;
   }
 
@@ -252,28 +257,39 @@ main li div a {
     transform: translateX(400%);
   }
 
-  .active-slide {
-    overflow: hidden;
+  .carousel-button--left {
+    right: 115%;
   }
 }
 
 @media screen and (min-width: 1300px) {
+  main {
+    grid-template-rows: 20px 1fr 0px;
+  }
+
   main li div {
-    grid-template-rows: 250px 300px 30px 0px 70px;
+    grid-template-rows: 290px 220px 30px 40px 10px;
+  }
+
+  main p,
+  main a {
+    font-size: 0.9em;
   }
 
   .article-carousel {
-    height: 930px;
+    height: 850px;
     width: 1200px;
   }
 
   main li div {
-    grid-template-rows: 290px 230px 30px 40px 10px;
+    grid-template-rows: 290px 220px 30px 40px 10px;
   }
-}
 
-@media screen and (min-width: 1440px) {
-  .article-carousel {
-    width: 1300px;
+  .carousel-button--left {
+    right: 111%;
+  }
+
+  .carousel-button--right {
+    left: 92%;
   }
 }

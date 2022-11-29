@@ -24,7 +24,7 @@ function createSlides(articles) {
         <p><span>Author:</span> ${article._embedded.author[0].name}</p>
         <p><span>Published:</span> ${article.date}</p>
         <p>${article.excerpt.rendered}</p>
-        <a href="">Read more</a>
+        <a href="full-article.html?id=${article.id}">Read more</a>
      </div>`;
   });
 }

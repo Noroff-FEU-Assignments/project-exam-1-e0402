@@ -1,5 +1,7 @@
-main {
-  flex-grow: 1;
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid black;
 }
 
 main p {

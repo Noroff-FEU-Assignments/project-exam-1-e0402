@@ -1,8 +1,9 @@
 @import "imports/variables.css";
 
-.logo {
-  width: 200px;
-  padding: 20px 0 40px 0;
+.logo-styling img {
+  padding-top: 25px;
+  padding-right: 15px;
+  width: 175px;
 }
 
 body {
@@ -41,6 +42,18 @@ main {
   background: var(--main-background);
 }
 
+/*Input/text area styling*/
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid black;
+}
+
+.search-input:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
 /*Header (Navigation)*/
 
 header {
@@ -51,6 +64,7 @@ header {
   padding-bottom: 0.01px;
   width: 100%;
   text-align: center;
+  height: 95px;
 }
 
 header nav {
@@ -138,6 +152,7 @@ header nav a {
 nav a:hover,
 footer button:hover {
   color: rgb(199, 199, 199);
+  cursor: pointer;
 }
 
 .media-icons {
@@ -225,6 +240,10 @@ footer a {
     gap: 25px;
     margin: 0 auto;
   }
+
+  .logo-styling img {
+    padding-right: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -247,6 +266,7 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding-top: 15px;
   }
 
   header nav a {
@@ -289,9 +309,6 @@ footer a {
   .logo-styling {
     grid-column: 2 / 3;
     margin-top: 0px;
-  }
-
-  .logo {
   }
 
   /*Footer*/
