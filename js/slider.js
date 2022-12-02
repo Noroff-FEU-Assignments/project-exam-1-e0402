@@ -6,7 +6,6 @@ const navigationDots = document.querySelector(".carousel-nav");
 const dots = Array.from(navigationDots.children);
 
 const slideWith = carouselSlides[0].getBoundingClientRect().width;
-
 // Positions the carousel slides next to eachother
 // carouselSlides[0].style.left = slideWith * 0 + "px";
 // carouselSlides[1].style.left = slideWith * 1 + "px";

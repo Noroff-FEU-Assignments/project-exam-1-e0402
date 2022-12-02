@@ -37,7 +37,6 @@ function createSlides(articles) {
 }
 
 /*Category buttons*/
-
 function handleCategoryButtons(allProducts) {
   const btns = document.querySelectorAll(".btn");
 
@@ -77,7 +76,6 @@ function handleCategoryFiltering(allProducts, filter) {
 }
 
 /*Latest articles button*/
-
 const latestButton = document.querySelector(".latest-button");
 
 latestButton.onclick = function () {
@@ -86,7 +84,6 @@ latestButton.onclick = function () {
 };
 
 /*Fetch more/all articles button*/
-
 const perPage = document.querySelector(".more-articles-button");
 
 perPage.onclick = function () {
@@ -96,7 +93,6 @@ perPage.onclick = function () {
 };
 
 /*Search*/
-
 const search = document.querySelector(".search-input");
 const searchInput = document.querySelector(".search-input");
 const searchButton = document.querySelector(".search-button");
