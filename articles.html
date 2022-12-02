@@ -22,7 +22,7 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="articles.html">Articles</a></li>
+          <li><a href="articles.html" class="current-page">Articles</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -33,32 +33,43 @@
         <h1>Enjoy our free selection of art history related articles</h1>
       </div>
       <div class="search">
-        <input
-          type="text"
-          class="search-input"
-          placeholder="     Search for something..."
-        />
-        <button>
-          <img src="" alt="" /><img src="/images/search-icon.svg" alt="" />
-        </button>
+        <div>
+          <input
+            type="text"
+            class="search-input"
+            id="search-input"
+            placeholder="Search for something..."
+          />
+          <button class="search-button">
+            <img src="/images/search-icon.svg" alt="" />
+          </button>
+        </div>
       </div>
       <div class="category-buttons">
-        <button class="active-button" data-filter="Latest">Latest</button>
-        <button class="category-button" data-filter="Impressionism">
+        <button class="category-button btn active-button latest-button">
+          Latest
+        </button>
+        <div class="more-articles-button">
+          <button class="category-button btn" value="12">All</button>
+        </div>
+        <button class="category-button btn" data-filter="Impressionism">
           Impressionism
         </button>
-        <button class="category-button" data-filter="Cubism">Cubism</button>
-        <button class="category-button" data-filter="Golden age">
+        <button class="category-button btn" data-filter="Cubism">Cubism</button>
+        <button class="category-button btn" data-filter="Golden age">
           Golden age
         </button>
-        <button class="category-button" data-filter="Flemish">Flemish</button>
-        <button class="category-button" data-filter="Modernism">
+        <button class="category-button btn" data-filter="Flemish">
+          Flemish
+        </button>
+        <button class="category-button btn" data-filter="Modernism">
           Modernism
         </button>
-        <button class="category-button" data-filter="Realism">Realism</button>
-        <button class="category-button" data-filter="Dutch">Dutch</button>
-        <button class="category-button" data-filter="American">American</button>
-        <button class="category-button" data-filter="Expressionism">
+        <button class="category-button btn" data-filter="Realism">
+          Realism
+        </button>
+        <button class="category-button btn" data-filter="Dutch">Dutch</button>
+        <button class="category-button btn" data-filter="Expressionism">
           Expressionism
         </button>
       </div>
@@ -82,9 +93,9 @@
       <div class="footer-nav">
         <nav>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Articles</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="">Privacy</a></li>
           </ul>

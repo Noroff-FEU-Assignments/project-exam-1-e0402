@@ -1,14 +1,12 @@
 main {
-  background-image: url("/images/bildee.jpeg"); /*Hidden because of bg color*/
+  background-image: url("/images/Russell.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 27%;
+  background-size: 175%;
   background-position-y: bottom;
   background-position-x: center;
-  background: var(--main-background);
   min-height: 100vh;
-}
-
-.logo-styling {
+  object-fit: cover;
+  padding: 0 15px;
 }
 
 main h2 {
@@ -17,68 +15,94 @@ main h2 {
 
 main p {
   font-size: var(--font-size-paragraphs-main);
+  padding: 0;
 }
 
-@media screen and (min-width: 1220px) {
-  span {
-    font-weight: bold;
-  }
-  .page-grid {
-    display: grid;
-    grid-template-rows: 320px 540px 1fr 150px;
-    line-height: var(--line-height);
-    background-image: url("/images/big-splash.svg"),
-      url("/images/small-splash.svg"), url("/images/top-splash.svg");
-    background-size: 23%, 29%, 30%;
-    background-position-y: 50%, 17%, -7%;
-    background-position-x: 6%, 102%, 10%;
-    background-repeat: no-repeat;
-  }
+main h2,
+main h3 {
+  text-align: center;
+}
 
-  main h2,
-  main h3 {
-    text-align: center;
+main img {
+  border-radius: 50%;
+  max-width: 60%;
+  min-width: 220px;
+  margin: 0 auto 15px auto;
+}
+
+span {
+  font-weight: bold;
+}
+.page-grid {
+  display: grid;
+  grid-template-rows: 320px 500px 1fr 150px;
+  line-height: var(--line-height);
+  background-image: url("/images/top-splash.svg");
+  background-size: 500px;
+  background-position-y: 35px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+.header-image {
+  background-image: url("/images/about-logo-black.svg");
+  background-repeat: no-repeat;
+  background-size: 335px;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.grid-section-one {
+  margin: auto;
+  max-width: 500px;
+  margin-top: 0;
+}
+
+.grid-section-two {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 50px;
+  justify-content: center;
+  max-width: 500px;
+  padding: 50px;
+  margin: auto;
+  background: white;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.42);
+}
+
+.grid-section-two div div:nth-child(1) {
+  display: flex;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    background-position-y: 970px;
+    background-size: 100%;
   }
 
   main img {
-    border-radius: 50%;
-    width: 220px;
+    max-width: 220px;
   }
 
   .header-image {
-    background-image: url("/images/about-logo-black.svg");
-    background-repeat: no-repeat;
-    background-size: 35%; /*NB USE pixels!!!*/
-    background-position-y: center, 28%;
-    background-position-x: center;
-  }
-
-  .grid-section-one {
-    margin: auto;
-    max-width: 500px;
-    margin-top: 0;
+    background-size: 400px;
   }
 
   .grid-section-two {
-    display: grid;
     grid-template-columns: repeat(3, 250px);
-    grid-template-row: repeat(3, 1fr);
-    column-gap: 50px;
-    justify-content: center;
+    grid-template-rows: unset;
     max-width: 1000px;
-    padding: 50px;
-    margin: auto;
-    background: white;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.42);
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  body {
-    background-position-y: -16%;
   }
 
-  .background-color {
-    heigh: 50%;
+  .page-grid {
+    background-image: url("/images/big-splash.svg"),
+      url("/images/small-splash.svg"), url("/images/top-splash.svg");
+    background-size: 325px, 415px, 430px;
+    background-position-y: 50%, 17%, -7%;
+    background-position-x: 6%, 102%, 10%;
+  }
+
+  .header-image {
+    background-size: 470px;
   }
 }

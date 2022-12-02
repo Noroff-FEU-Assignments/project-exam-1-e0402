@@ -1,22 +1,33 @@
-const articlesUrl = `https://artrospective.com/Artrospective/wp-json/wp/v2/posts?_embed&per_page=10`;
+const articlesUrl = `https://artrospective.com/Artrospective/wp-json/wp/v2/posts?_embed&wp:term`;
 const articlesContainer = document.querySelector(".articles-container");
 
-async function fetchArticles() {
+const perPage = document.querySelector(".more-articles-button");
+
+const search = document.querySelector(".search-input");
+
+async function fetchArticles(url) {
   try {
-    const response = await fetch(articlesUrl);
+    const response = await fetch(url);
     const articles = await response.json();
 
     console.log(articles);
     createSlides(articles);
-    // handleCategoryButtons(products);
+    handleCategoryButtons(articles);
+
+    searchButton.onclick = function searchArticles() {
+      const searchedArticles = articles.filter(checkName);
+      createSlides(searchedArticles);
+    };
   } catch (error) {
     console.log(error);
   }
 }
 
-fetchArticles();
+fetchArticles(articlesUrl);
 
 function createSlides(articles) {
+  articlesContainer.innerHTML = "";
+
   articles.forEach(function (article) {
     articlesContainer.innerHTML += `<div>
         <img src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="carousel-image" alt="${article.slug}">
@@ -29,43 +40,69 @@ function createSlides(articles) {
   });
 }
 
-// function handleCategoryButtons(allProducts) {
-//   const btns = document.querySelectorAll("button");
+/*Category buttons*/
 
-//   if (btns.length === 0) {
-//     return console.log("No category buttons found");
-//   }
+function handleCategoryButtons(allProducts) {
+  const btns = document.querySelectorAll(".btn");
 
-//   for (let i = 0; i < btns.length; i++) {
-//     btns[i].addEventListener("click", (event) => {
-//       const filter = event.target.dataset.filter;
-//       const categoryTitle = document.querySelector(".category-title");
+  if (btns.length === 0) {
+    return console.log("There are no category buttons");
+  }
 
-//       handleCategoryButtonClasses(event.target, btns);
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", (event) => {
+      const filter = event.target.dataset.filter;
 
-//       categoryTitle.innerHTML = event.target.dataset.filter;
+      handleCategoryButtonClasses(event.target, btns);
 
-//       console.log(filter);
-//       const filteredProducts = handleCategoryFiltering(allProducts, filter);
+      console.log(filter);
+      const filteredProducts = handleCategoryFiltering(allProducts, filter);
 
-//       createProducts(filteredProducts);
-//     });
-//   }
-// }
+      createSlides(filteredProducts);
+    });
+  }
+}
 
-// function handleCategoryButtonClasses(clickedElement, allButtons) {
-//   allButtons.forEach((btn) => btn.classList.remove("category_styling_two"));
-//   clickedElement.classList.add("category_styling_two");
-// }
+function handleCategoryButtonClasses(clickedElement, allButtons) {
+  allButtons.forEach((btn) => btn.classList.remove("active-button"));
+  clickedElement.classList.add("active-button");
+}
 
-// function handleCategoryFiltering(allProducts, filter) {
-//   const filteredProducts = allProducts.filter(function (product) {
-//     if (product.categories.some((category) => category.name === filter)) {
-//       return true;
-//     }
-//   });
+function handleCategoryFiltering(allProducts, filter) {
+  const filteredProducts = allProducts.filter(function (article) {
+    if (article._embedded["wp:term"][0][0].name === filter) {
+      return true;
+    }
+  });
 
-//   console.log(filteredProducts);
+  console.log(filteredProducts);
 
-//   return filteredProducts;
-// }
+  return filteredProducts;
+}
+
+const latestButton = document.querySelector(".latest-button");
+
+latestButton.onclick = function () {
+  articlesContainer.innerHTML = "";
+  fetchArticles(articlesUrl);
+};
+
+/*Search*/
+
+const searchInput = document.querySelector(".search-input");
+const searchButton = document.querySelector(".search-button");
+
+function checkName(article) {
+  return (
+    article._embedded["wp:term"][0][0].name === searchInput.value ||
+    article._embedded["wp:term"][0][0].name.toLowerCase() === searchInput.value
+  );
+}
+
+/*Fetch more articles button*/
+
+perPage.onclick = function () {
+  const newUrl = articlesUrl + `&per_page=100`;
+  articlesContainer.innerHTML = "";
+  fetchArticles(newUrl);
+};

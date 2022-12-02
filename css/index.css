@@ -31,24 +31,10 @@ a:hover {
 
 /*Homepage carousel*/
 
-main span {
-  font-weight: bold;
-}
-
-main li div p:nth-child(3),
-main li div p:nth-child(4) {
-  font-size: 0.8em;
-}
-
 main p {
   color: rgb(0, 0, 0);
   margin: 5px;
   line-height: var(--line-height);
-}
-
-main p,
-main h3 {
-  padding: 0 15px;
 }
 
 main li {
@@ -192,6 +178,11 @@ main li div a {
 
   main {
     grid-template-rows: 250px 1fr 50px;
+    background-image: url("/images/top-splash.svg");
+    background-size: 400px;
+    background-position-y: top;
+    background-position-x: right;
+    background-repeat: no-repeat;
   }
 
   .article-carousel {

@@ -24,6 +24,7 @@ async function fetchArticle() {
 fetchArticle();
 
 function createHTML(article) {
+  document.title = `ARTrospective | ${article.title.rendered}`;
   articleContainer.innerHTML += `<div>
   <h1>${article.title.rendered}</h1>
   <p><span>Published:</span> ${article.date}</p>
