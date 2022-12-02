@@ -1,10 +1,6 @@
 const articlesUrl = `https://artrospective.com/Artrospective/wp-json/wp/v2/posts?_embed&wp:term`;
 const articlesContainer = document.querySelector(".articles-container");
 
-const perPage = document.querySelector(".more-articles-button");
-
-const search = document.querySelector(".search-input");
-
 async function fetchArticles(url) {
   try {
     const response = await fetch(url);
@@ -80,6 +76,8 @@ function handleCategoryFiltering(allProducts, filter) {
   return filteredProducts;
 }
 
+/*Latest articles button*/
+
 const latestButton = document.querySelector(".latest-button");
 
 latestButton.onclick = function () {
@@ -87,8 +85,19 @@ latestButton.onclick = function () {
   fetchArticles(articlesUrl);
 };
 
+/*Fetch more/all articles button*/
+
+const perPage = document.querySelector(".more-articles-button");
+
+perPage.onclick = function () {
+  const newUrl = articlesUrl + `&per_page=100`;
+  articlesContainer.innerHTML = "";
+  fetchArticles(newUrl);
+};
+
 /*Search*/
 
+const search = document.querySelector(".search-input");
 const searchInput = document.querySelector(".search-input");
 const searchButton = document.querySelector(".search-button");
 
@@ -98,11 +107,3 @@ function checkName(article) {
     article._embedded["wp:term"][0][0].name.toLowerCase() === searchInput.value
   );
 }
-
-/*Fetch more articles button*/
-
-perPage.onclick = function () {
-  const newUrl = articlesUrl + `&per_page=100`;
-  articlesContainer.innerHTML = "";
-  fetchArticles(newUrl);
-};
