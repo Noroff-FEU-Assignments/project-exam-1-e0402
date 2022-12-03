@@ -45,6 +45,7 @@ main h3 {
 
 main {
   background: var(--main-background);
+  margin-top: 100px;
 }
 
 /*Input/text area styling*/
@@ -61,16 +62,17 @@ textarea:focus {
 }
 
 /*Header (Navigation)*/
-
 header {
   background: var(--header-background);
   color: var(--text-color-one);
-  position: sticky;
+  position: fixed;
+  top: 0;
   padding-top: 0.01px;
   padding-bottom: 0.01px;
   width: 100%;
   text-align: center;
   height: 95px;
+  z-index: 999;
 }
 
 header nav {
@@ -166,7 +168,6 @@ footer button:hover {
 }
 
 /*Footer*/
-
 footer {
   background: var(--header-background);
   color: var(--text-color-one);
@@ -240,7 +241,6 @@ footer a {
 }
 
 /*Articles*/
-
 main span,
 .articles-container span {
   font-weight: bold;
@@ -266,7 +266,6 @@ main li div p:nth-child(4) {
 
 @media screen and (min-width: 768px) {
   /*Navigation*/
-
   .current-page {
     text-decoration: underline;
   }
@@ -330,7 +329,6 @@ main li div p:nth-child(4) {
   }
 
   /*Footer*/
-
   footer {
     grid-template-columns: 1fr 320px 320px 1fr;
     grid-template-rows: repeat(4, 95px);
@@ -384,7 +382,6 @@ main li div p:nth-child(4) {
 
 @media screen and (min-width: 1366px) {
   /*Footer*/
-
   footer {
     grid-template-columns: 1fr 300px 330px 320px 1fr;
     grid-template-rows: repeat(4, 90px);

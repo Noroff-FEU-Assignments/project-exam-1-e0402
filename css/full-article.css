@@ -1,8 +1,5 @@
 main {
-  max-width: 600px;
-  margin: 50px auto 150px auto;
-  padding: 0 15px;
-  line-height: var(--line-height);
+  background: var(--main-background-two);
 }
 
 h1 {
@@ -19,14 +16,45 @@ main img {
   height: 100%;
 }
 main div {
-  background: white;
+  background: var(--main-background-two);
 }
 
-main div div p:nth-child(2),
-main div div p:nth-child(3) {
+.content p:nth-child(2),
+.content p:nth-child(3) {
   font-size: 0.8em;
 }
 
-main div div p:nth-child(3) {
+.content p:nth-child(3) {
   margin-bottom: 50px;
+}
+
+/*Image modal*/
+.max-width {
+  max-width: 650px;
+  margin: 150px auto 150px auto;
+  padding: 0 15px;
+  line-height: var(--line-height);
+}
+
+.hide-image {
+  display: none;
+  width: 160%;
+  margin-left: -30%;
+}
+
+figure {
+  transition: all 0.2 ease-in-out;
+}
+
+figure:hover {
+  cursor: zoom-in;
+}
+
+.hide-image:hover {
+  cursor: zoom-out;
+}
+
+figure img:hover {
+  border: 1.5px solid black;
+  transform: scale(1.05);
 }

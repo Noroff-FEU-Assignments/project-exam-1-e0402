@@ -9,17 +9,12 @@ main {
   padding: 0 15px;
 }
 
-main h2 {
-  font-size: 2.3em;
-}
-
 main p {
   font-size: var(--font-size-paragraphs-main);
   padding: 0;
 }
 
-main h2,
-main h3 {
+main h1 {
   text-align: center;
 }
 

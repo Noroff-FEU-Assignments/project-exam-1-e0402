@@ -1,40 +1,17 @@
-import article from "./articles-folder.js/articles.js";
+const contentImage = document.querySelector(".hide-content");
+const modalImage = document.querySelector(".modal-image");
+const main = document.querySelector("main");
 
-let articlesToRender = createSlides(articles);
+contentImage.addEventListener("click", function showModalImage() {
+  modalImage.style.display = "block";
+});
 
-search.onkeyup = function () {
-  const searchValue = event.target.value.trim().toLowerCase();
-
-  const filteredArticles = articles.filter(function (article) {
-    if (article.title.rendered.toLowerCase().startsWith(searchValue)) {
-      return true;
+main.addEventListener(
+  "click",
+  function closeModalImage(event) {
+    if (event.target.closest(".modal")) {
+      modalImage.style.display = "none";
     }
-  });
-
-  console.log(filteredArticles);
-
-  articlesToRender = filteredArticles;
-
-  createSlides(articles);
-};
-
-const searchInput = document.querySelector(".search-input");
-const searchButton = document.querySelector(".search-button");
-const searchValue = value.trim().toLowerCase();
-
-function checkName(article) {
-  if (
-    article.title.rendered.toLowerCase().startsWith(searchValue) ===
-    searchInput.value
-  ) {
-    return true;
-  }
-}
-
-// const searchValue = event.target.value.trim().toLowerCase();
-
-//   const filteredArticles = articles.filter(function (article) {
-//     if (article.title.rendered.toLowerCase().startsWith(searchValue)) {
-//       return true;
-//     }
-//   });
+  },
+  false
+);

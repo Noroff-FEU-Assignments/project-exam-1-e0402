@@ -24,9 +24,9 @@ span {
 
 /*First page column*/
 
-main h2 {
+main h1 {
   text-align: center;
-  margin-top: 70px;
+  margin: 70px 0 40px 0;
 }
 
 main img,

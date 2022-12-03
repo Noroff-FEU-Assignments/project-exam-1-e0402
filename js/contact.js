@@ -14,13 +14,13 @@ const contactMessageError = document.querySelector("#contact-message-error");
 function formValidation() {
   event.preventDefault();
 
-  if (checkLength(firstName.value, 6) === true) {
+  if (checkLength(firstName.value, 5) === true) {
     firstNameError.style.display = "none";
   } else {
     firstNameError.style.display = "block";
   }
 
-  if (checkLength(lastName.value, 6) === true) {
+  if (checkLength(lastName.value, 5) === true) {
     lastNameError.style.display = "none";
   } else {
     lastNameError.style.display = "block";
@@ -32,13 +32,13 @@ function formValidation() {
     emailError.style.display = "block";
   }
 
-  if (checkLength(topic.value, 9) === true) {
+  if (checkLength(topic.value, 15) === true) {
     topicError.style.display = "none";
   } else {
     topicError.style.display = "block";
   }
 
-  if (checkLength(contactMessage.value, 20) === true) {
+  if (checkLength(contactMessage.value, 25) === true) {
     contactMessageError.style.display = "none";
   } else {
     contactMessageError.style.display = "block";
