@@ -7,12 +7,12 @@ async function fetchArticles(url) {
     const articles = await response.json();
 
     console.log(articles);
-    createSlides(articles);
+    createArticles(articles);
     handleCategoryButtons(articles);
 
     searchButton.onclick = function searchArticles() {
       const searchedArticles = articles.filter(checkName);
-      createSlides(searchedArticles);
+      createArticles(searchedArticles);
     };
   } catch (error) {
     console.log(error);
@@ -21,23 +21,23 @@ async function fetchArticles(url) {
 
 fetchArticles(articlesUrl);
 
-function createSlides(articles) {
+function createArticles(articles) {
   articlesContainer.innerHTML = "";
 
   articles.forEach(function (article) {
-    articlesContainer.innerHTML += `<div>
+    articlesContainer.innerHTML += `<div class="articles-styling">
         <img src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="carousel-image" alt="${article.slug}">
         <h3>${article.title.rendered}</h3>
         <p><span>Author:</span> ${article._embedded.author[0].name}</p>
         <p><span>Published:</span> ${article.date}</p>
         <p>${article.excerpt.rendered}</p>
-        <a href="full-article.html?id=${article.id}">Read more</a>
+        <a class="read-more-button" href="full-article.html?id=${article.id}">Read more</a>
      </div>`;
   });
 }
 
 /*Category buttons*/
-function handleCategoryButtons(allProducts) {
+function handleCategoryButtons(allArticles) {
   const btns = document.querySelectorAll(".btn");
 
   if (btns.length === 0) {
@@ -51,9 +51,9 @@ function handleCategoryButtons(allProducts) {
       handleCategoryButtonClasses(event.target, btns);
 
       console.log(filter);
-      const filteredProducts = handleCategoryFiltering(allProducts, filter);
+      const filteredArticles = handleCategoryFiltering(allArticles, filter);
 
-      createSlides(filteredProducts);
+      createArticles(filteredArticles);
     });
   }
 }
@@ -63,16 +63,16 @@ function handleCategoryButtonClasses(clickedElement, allButtons) {
   clickedElement.classList.add("active-button");
 }
 
-function handleCategoryFiltering(allProducts, filter) {
-  const filteredProducts = allProducts.filter(function (article) {
+function handleCategoryFiltering(allArticles, filter) {
+  const filteredArticles = allArticles.filter(function (article) {
     if (article._embedded["wp:term"][0][0].name === filter) {
       return true;
     }
   });
 
-  console.log(filteredProducts);
+  console.log(filteredArticles);
 
-  return filteredProducts;
+  return filteredArticles;
 }
 
 /*Latest articles button*/

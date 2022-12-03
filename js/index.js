@@ -14,6 +14,12 @@ async function fetchArticles() {
     const articles = await response.json();
 
     console.log(articles);
+
+    articlesContainerOne.innerHTML = "";
+    articlesContainerTwo.innerHTML = "";
+    articlesContainerThree.innerHTML = "";
+    articlesContainerFour.innerHTML = "";
+
     createSlides(articles);
   } catch (error) {
     console.log(error);
@@ -25,40 +31,40 @@ fetchArticles();
 function createSlides(articles) {
   articles.forEach(function (article, index) {
     if (index === 0 || index === 1 || index === 2) {
-      articlesContainerOne.innerHTML += `<div>
+      articlesContainerOne.innerHTML += `<div class="articles-styling">
       <img src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="carousel-image" alt="${article.slug}">
       <h3>${article.title.rendered}</h3>
-      <p><span>Author:</span> ${article._embedded.author[0].name}</p>
-      <p><span>Published:</span> ${article.date}</p>
+      <p class="small-text"><span>Author:</span> ${article._embedded.author[0].name}</p>
+      <p class="small-text"><span>Published:</span> ${article.date}</p>
       <p>${article.excerpt.rendered}</p>
-      <a href="full-article.html?id=${article.id}">Read more</a>
+      <a class="read-more-button" href="full-article.html?id=${article.id}">Read more</a>
    </div>`;
     } else if (index === 3 || index === 4 || index === 5) {
-      articlesContainerTwo.innerHTML += `<div>
+      articlesContainerTwo.innerHTML += `<div class="articles-styling">
       <img src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="carousel-image" alt="${article.slug}">
       <h3>${article.title.rendered}</h3>
-      <p><span>Author:</span> ${article._embedded.author[0].name}</p>
-      <p><span>Published:</span> ${article.date}</p>
+      <p class="small-text"><span>Author:</span> ${article._embedded.author[0].name}</p>
+      <p class="small-text"><span>Published:</span> ${article.date}</p>
       <p>${article.excerpt.rendered}</p>
-      <a href="full-article.html?id=${article.id}">Read more</a>
+      <a class="read-more-button" href="full-article.html?id=${article.id}">Read more</a>
    </div>`;
     } else if (index === 6 || index === 7 || index === 8) {
-      articlesContainerThree.innerHTML += `<div>
+      articlesContainerThree.innerHTML += `<div class="articles-styling">
       <img src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="carousel-image" alt="${article.slug}">
       <h3>${article.title.rendered}</h3>
-      <p><span>Author:</span> ${article._embedded.author[0].name}</p>
-      <p><span>Published:</span> ${article.date}</p>
+      <p class="small-text"><span>Author:</span> ${article._embedded.author[0].name}</p>
+      <p class="small-text"><span>Published:</span> ${article.date}</p>
       <p>${article.excerpt.rendered}</p>
-      <a href="full-article.html?id=${article.id}">Read more</a>
+      <a class="read-more-button" href="full-article.html?id=${article.id}">Read more</a>
    </div>`;
     } else if (index === 9 || index === 10 || index === 11) {
-      articlesContainerFour.innerHTML += `<div>
+      articlesContainerFour.innerHTML += `<div class="articles-styling">
       <img src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="carousel-image" alt="${article.slug}">
       <h3>${article.title.rendered}</h3>
-      <p><span>Author:</span> ${article._embedded.author[0].name}</p>
-      <p><span>Published:</span> ${article.date}</p>
+      <p class="small-text"><span>Author:</span> ${article._embedded.author[0].name}</p>
+      <p class="small-text"><span>Published:</span> ${article.date}</p>
       <p>${article.excerpt.rendered}</p>
-      <a href="full-article.html?id=${article.id}">Read more</a>
+      <a class="read-more-button" href="full-article.html?id=${article.id}">Read more</a>
    </div>`;
     }
   });

@@ -18,6 +18,14 @@ main {
   flex-grow: 1;
 }
 
+main h1 {
+  text-align: center;
+}
+
+span {
+  font-weight: bold;
+}
+
 h1,
 h2,
 h3 {
@@ -35,7 +43,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2em;
+  font-size: var(--h3-size);
 }
 
 main p,
@@ -46,6 +54,30 @@ main h3 {
 main {
   background: var(--main-background);
   margin-top: 100px;
+}
+
+.button-text {
+  font-size: var(--button-text-size);
+}
+
+/*Loading wheel*/
+.loading-wheel {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #373736;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation: spin 2s linear infinite;
+  margin: 300px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*Input/text area styling*/
@@ -102,10 +134,9 @@ header nav li {
 
 header nav a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color-one);
   padding-left: 1.5em;
   opacity: 0;
-  transitio: opacity 1500ms ease-in-out;
 }
 
 .toggle:checked ~ nav {
@@ -114,7 +145,6 @@ header nav a {
 
 .toggle:checked ~ nav a {
   opacity: 1;
-  transitio: 250ms ease-in-out;
 }
 
 .toggle {
@@ -134,7 +164,7 @@ header nav a {
 .toggle-label span,
 .toggle-label span::before,
 .toggle-label span::after {
-  background: white;
+  background: var(--main-background-two);
   display: block;
   position: relative;
   width: 2em;
@@ -202,10 +232,6 @@ footer p,
   margin-right: auto;
 }
 
-.footer-row-one {
-  margin-to: 30px;
-}
-
 footer input {
   height: 35px;
   width: 190px;
@@ -241,14 +267,28 @@ footer a {
 }
 
 /*Articles*/
-main span,
-.articles-container span {
-  font-weight: bold;
+.small-text {
+  font-size: 0.8em;
 }
 
-main li div p:nth-child(3),
-main li div p:nth-child(4) {
-  font-size: 0.8em;
+.read-more-button {
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.85em;
+  color: var(--text-color-one);
+  font-weight: bold;
+  background: black;
+  padding: 10px 30px;
+  padding-top: 11px;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.articles-styling {
+  background: var(--articles-background);
 }
 
 @media screen and (min-width: 500px) {
@@ -302,7 +342,7 @@ main li div p:nth-child(4) {
     transform: scale(0, 1);
     transform-origin: left;
     transition: transform ease-in-out 230ms;
-    background: #fff;
+    background: var(--main-background-two);
     height: 2px;
     position: absolute;
     right: 0;
@@ -335,7 +375,6 @@ main li div p:nth-child(4) {
     row-gap: 0;
     column-gap: 50px;
     justify-content: center;
-    positio: sticky; /*NB*/
   }
 
   .footer-row-one {

@@ -1,9 +1,14 @@
+main,
+.page-grid,
+.header-image {
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
 main {
   background-image: url("/images/Russell.jpg");
-  background-repeat: no-repeat;
   background-size: 175%;
   background-position-y: bottom;
-  background-position-x: center;
   min-height: 100vh;
   object-fit: cover;
   padding: 0 15px;
@@ -14,10 +19,6 @@ main p {
   padding: 0;
 }
 
-main h1 {
-  text-align: center;
-}
-
 main img {
   border-radius: 50%;
   max-width: 60%;
@@ -25,9 +26,6 @@ main img {
   margin: 0 auto 15px auto;
 }
 
-span {
-  font-weight: bold;
-}
 .page-grid {
   display: grid;
   grid-template-rows: 320px 500px 1fr 150px;
@@ -35,16 +33,12 @@ span {
   background-image: url("/images/top-splash.svg");
   background-size: 500px;
   background-position-y: 35px;
-  background-position-x: center;
-  background-repeat: no-repeat;
 }
 
 .header-image {
   background-image: url("/images/about-logo-black.svg");
-  background-repeat: no-repeat;
   background-size: 335px;
   background-position-y: center;
-  background-position-x: center;
 }
 
 .grid-section-one {
@@ -61,7 +55,7 @@ span {
   max-width: 500px;
   padding: 50px;
   margin: auto;
-  background: white;
+  background: var(--main-background-two);
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.42);
 }
 

@@ -24,15 +24,12 @@ h1 img {
 }
 
 /*Read more button hover effect*/
-
 a:hover {
   color: rgb(199, 199, 199);
 }
 
 /*Homepage carousel*/
-
 main p {
-  color: rgb(0, 0, 0);
   margin: 5px;
   line-height: var(--line-height);
 }
@@ -43,7 +40,6 @@ main li {
 }
 
 main li div {
-  background: var(--carousel-background);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   display: grid;
   grid-template-rows: 250px;
@@ -131,22 +127,6 @@ main li div {
 
 .is-hidden {
   display: none;
-}
-
-main li div a {
-  text-decoration: none;
-  text-align: center;
-  font-size: 0.85em;
-  color: var(--text-color-one);
-  font-weight: bold;
-  background: black;
-  padding: 10px 30px;
-  padding-top: 11px;
-  height: 40px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  border-radius: 25px;
-  box-sizing: border-box;
 }
 
 @media screen and (min-width: 500px) {

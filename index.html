@@ -13,7 +13,9 @@
   <body>
     <header>
       <a href="index.html" class="logo-styling"
-        ><img src="/images/logo-white.svg" alt=""
+        ><img
+          src="/images/logo-white.svg"
+          alt="A white logo showing the name ARTrospective together with a paint splash"
       /></a>
       <input type="checkbox" class="toggle" id="toggle" />
       <label for="toggle" class="toggle-label">
@@ -38,18 +40,34 @@
       </div>
       <div class="article-carousel">
         <button class="carousel-button carousel-button--left is-hidden">
-          <img src="/images/left-arrow.svg" alt="" />
+          <img src="/images/left-arrow.svg" alt="Left arrow icon" />
         </button>
         <div class="carousel-track-container">
           <ul class="carousel-track" id="parent">
-            <li class="carousel-slide active-slide articles-container-one"></li>
-            <li class="carousel-slide articles-container-two"></li>
-            <li class="carousel-slide articles-container-three"></li>
-            <li class="carousel-slide articles-container-four"></li>
+            <li class="carousel-slide active-slide articles-container-one">
+              <div class="loading-wheel"></div>
+              <div class="loading-wheel"></div>
+              <div class="loading-wheel"></div>
+            </li>
+            <li class="carousel-slide articles-container-two">
+              <div class="loading-wheel"></div>
+              <div class="loading-wheel"></div>
+              <div class="loading-wheel"></div>
+            </li>
+            <li class="carousel-slide articles-container-three">
+              <div class="loading-wheel"></div>
+              <div class="loading-wheel"></div>
+              <div class="loading-wheel"></div>
+            </li>
+            <li class="carousel-slide articles-container-four">
+              <div class="loading-wheel"></div>
+              <div class="loading-wheel"></div>
+              <div class="loading-wheel"></div>
+            </li>
           </ul>
         </div>
         <button class="carousel-button carousel-button--right">
-          <img src="/images/right-arrow.svg" alt="" />
+          <img src="/images/right-arrow.svg" alt="Right arrow icon" />
         </button>
         <div class="carousel-nav">
           <button class="carousel-indicator active-slide"></button>
@@ -72,7 +90,7 @@
           placeholder="   example@something.com"
           class="newsletter-input"
         />
-        <button>Sign up</button>
+        <button class="button-text">Sign up</button>
       </div>
       <div class="footer-nav">
         <nav>
