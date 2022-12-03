@@ -53,7 +53,7 @@ function createHTML(article) {
     <p><span>Author:</span> ${article._embedded.author[0].name}</p>
   </div>
   <div>
-    <img class="hide-image" src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="carousel-image" alt="${article.slug}">
+    <img class="hide-image" src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="carousel-image">
     <div class="content-image content-two">${article.content.rendered}</div>
   </div>`;
 }

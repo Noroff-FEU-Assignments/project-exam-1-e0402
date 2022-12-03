@@ -13,6 +13,7 @@ async function fetchArticles(url) {
     searchButton.onclick = function searchArticles() {
       const searchedArticles = articles.filter(checkName);
       createArticles(searchedArticles);
+      console.log(articles[i]._embedded["wp:featuredmedia"]["0"]);
     };
   } catch (error) {
     console.log(error);
@@ -26,7 +27,7 @@ function createArticles(articles) {
 
   articles.forEach(function (article) {
     articlesContainer.innerHTML += `<div class="articles-styling">
-        <img src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}" class="carousel-image" alt="${article.slug}">
+        <img src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}">
         <h3>${article.title.rendered}</h3>
         <p><span>Author:</span> ${article._embedded.author[0].name}</p>
         <p><span>Published:</span> ${article.date}</p>

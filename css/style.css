@@ -267,7 +267,8 @@ footer a {
 }
 
 /*Articles*/
-.small-text {
+.small-text,
+figcaption {
   font-size: 0.8em;
 }
 

@@ -2,8 +2,9 @@ main {
   background: var(--main-background-two);
 }
 
-h1 {
+main h1 {
   margin-bottom: 50px;
+  text-align: unset;
 }
 
 main h3 {
