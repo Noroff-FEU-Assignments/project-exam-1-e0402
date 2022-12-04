@@ -27,7 +27,7 @@ function createArticles(articles) {
   articles.forEach(function (article) {
     articlesContainer.innerHTML += `<div class="articles-styling">
         <img src="${article._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url}">
-        <h3>${article.title.rendered}</h3>
+        <h2>${article.title.rendered}</h2>
         <p><span>Author:</span> ${article._embedded.author[0].name}</p>
         <p><span>Published:</span> ${article.date}</p>
         <p>${article.excerpt.rendered}</p>

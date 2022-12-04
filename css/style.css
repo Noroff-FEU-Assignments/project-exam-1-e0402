@@ -47,7 +47,7 @@ h3 {
 }
 
 main p,
-main h3 {
+main h2 {
   padding: 0 15px;
 }
 
@@ -78,6 +78,18 @@ main {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*Hover effects*/
+nav a:hover,
+.read-more-button:hover, 
+footer button:hover {
+  color: rgb(199, 199, 199);
+  cursor: pointer;
+}
+
+.media-icons:hover {
+  transform: scale(1.1);
 }
 
 /*Input/text area styling*/
@@ -186,17 +198,6 @@ header nav a {
   top: 10px;
 }
 
-/*Hover effect for both nav header and nav footer, and footer button*/
-nav a:hover,
-footer button:hover {
-  color: rgb(199, 199, 199);
-  cursor: pointer;
-}
-
-.media-icons {
-  fill: red;
-}
-
 /*Footer*/
 footer {
   background: var(--header-background);
@@ -218,6 +219,7 @@ footer {
 
 .media-icons {
   width: 30px;
+  transition: all 0.2 ease-in-out;
 }
 
 footer h3 {

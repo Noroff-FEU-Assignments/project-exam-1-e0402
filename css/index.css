@@ -23,11 +23,6 @@ h1 img {
   margin-top: 50px;
 }
 
-/*Read more button hover effect*/
-a:hover {
-  color: rgb(199, 199, 199);
-}
-
 /*Homepage carousel*/
 main p {
   margin: 5px;
