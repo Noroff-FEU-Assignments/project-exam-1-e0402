@@ -13,7 +13,6 @@ async function fetchArticles(url) {
     searchButton.onclick = function searchArticles() {
       const searchedArticles = articles.filter(checkName);
       createArticles(searchedArticles);
-      console.log(articles[i]._embedded["wp:featuredmedia"]["0"]);
     };
   } catch (error) {
     console.log(error);
@@ -101,6 +100,6 @@ const searchButton = document.querySelector(".search-button");
 function checkName(article) {
   return (
     article._embedded["wp:term"][0][0].name === searchInput.value ||
-    article._embedded["wp:term"][0][0].name.toLowerCase() === searchInput.value
+    article._embedded["wp:term"][1][0].name.toLowerCase() === searchInput.value
   );
 }
