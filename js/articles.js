@@ -100,6 +100,6 @@ const searchButton = document.querySelector(".search-button");
 function checkName(article) {
   return (
     article._embedded["wp:term"][0][0].name === searchInput.value ||
-    article._embedded["wp:term"][1][0].name.toLowerCase() === searchInput.value
+    article._embedded["wp:term"][0][0].name.toLowerCase() === searchInput.value
   );
 }
